@@ -26,7 +26,7 @@ class SettingsPanelProvider extends PanelProvider
             ->id('settings')
             ->path('settings')
             ->login(fn () => redirect()->route('filament.pim.auth.login'))
-            ->brandName('PIM / Settings')
+            ->brandName('Pisa / Settings')
             ->sidebarCollapsibleOnDesktop()
             ->maxContentWidth(MaxWidth::Full)
             ->colors([

@@ -1,11 +1,11 @@
-<p align="center"><strong>Lyon</strong></p>
+<p align="center"><strong>Pisa</strong></p>
 <p align="center">A self-hosted Product Information Management system built with Laravel 11 and Filament 3.</p>
 
 ---
 
-Lyon is the single source of truth for your product data. Catalog managers model the data they need with a **family configurator**, editors enrich **products** in a backoffice that adapts to that model, and downstream systems consume the result through a **read/write REST API** with filtering, sorting and pagination across custom attributes.
+Pisa is the single source of truth for your product data. Catalog managers model the data they need with a **family configurator**, editors enrich **products** in a backoffice that adapts to that model, and downstream systems consume the result through a **read/write REST API** with filtering, sorting and pagination across custom attributes.
 
-Lyon deliberately ships without third-party integrations. It owns the data model and exposes it over a clean API; connecting shops, marketplaces or DAMs is the job of the consuming system.
+Pisa deliberately ships without third-party integrations. It owns the data model and exposes it over a clean API; connecting shops, marketplaces or DAMs is the job of the consuming system.
 
 ## Table of contents
 
@@ -86,7 +86,7 @@ Attributes are managed in the **Settings** panel under *Attributes*.
 
 ### Scoping: channels, territories and locales
 
-Real catalogs do not have one value per attribute. A product description differs between the web shop and the printed catalog, a price differs between Germany and the US, and a name differs between German and English. Lyon models this with three independent scopes on each attribute:
+Real catalogs do not have one value per attribute. A product description differs between the web shop and the printed catalog, a price differs between Germany and the US, and a name differs between German and English. Pisa models this with three independent scopes on each attribute:
 
 | Flag                 | Scope      | Example values          | Meaning                                                   |
 |----------------------|------------|-------------------------|-----------------------------------------------------------|
@@ -128,7 +128,7 @@ Attributes with the `image` or `file` format accept uploads in the product form.
 
 ### Panels
 
-Lyon runs three Filament panels behind a single login.
+Pisa runs three Filament panels behind a single login.
 
 | Panel    | Path        | Audience                 | Content                                                                |
 |----------|-------------|--------------------------|------------------------------------------------------------------------|
@@ -372,7 +372,7 @@ Create a variant parent by giving it a family that declares variant axes, then c
 
 #### Media
 
-Image and file attributes accept either a `multipart/form-data` upload on `POST /products/{sku}/media/{attribute}` or a JSON body with a publicly reachable URL that Lyon downloads and stores.
+Image and file attributes accept either a `multipart/form-data` upload on `POST /products/{sku}/media/{attribute}` or a JSON body with a publicly reachable URL that Pisa downloads and stores.
 
 #### Delete
 
@@ -416,8 +416,8 @@ By design the API cannot change configuration. There are no endpoints to create,
 ### Bootstrap
 
 ```bash
-git clone <repository-url> lyon
-cd lyon
+git clone <repository-url> pisa
+cd pisa
 make init
 ```
 
@@ -501,7 +501,7 @@ app/
 
 ## Architecture
 
-Lyon is a **flexible EAV** (entity, attribute, value) system with a strongly typed edge.
+Pisa is a **flexible EAV** (entity, attribute, value) system with a strongly typed edge.
 
 - **Configuration is relational.** Families, attributes, options and scopes are ordinary tables with foreign keys. Family ↔ attribute is a pivot with `order` and `required`.
 - **Values are rows, not columns.** `product_attribute_values` holds one row per product, attribute, channel, territory and locale, with the value stored as JSON so every format fits the same column. A unique index on that tuple keeps writes idempotent, and generated columns for numeric and date formats make range filters and sorts index-friendly.
@@ -523,4 +523,6 @@ Out of scope for this release, planned afterwards:
 
 ## License
 
-Lyon is proprietary software of [byte5](https://byte5.de). All rights reserved.
+Pisa is free software licensed under the [GNU Affero General Public License v3.0 or later](LICENSE) (AGPL-3.0-or-later).
+
+You may use, modify and redistribute Pisa under its terms. If you run a modified version of Pisa as a network service, you must offer its users the corresponding source code.

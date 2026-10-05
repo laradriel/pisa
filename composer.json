@@ -1,12 +1,12 @@
 {
-    "name": "laravel/laravel",
+    "name": "laradriel/pisa",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Pisa, a self-hosted Product Information Management system.",
     "keywords": [
         "laravel",
         "framework"
     ],
-    "license": "MIT",
+    "license": "AGPL-3.0-or-later",
     "require": {
         "php": "^8.2",
         "filament/filament": "^3.2",
