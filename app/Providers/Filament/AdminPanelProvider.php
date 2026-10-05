@@ -26,7 +26,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login(fn () => redirect()->route('filament.pim.auth.login'))
-            ->brandName('PIM / Admin')
+            ->brandName('Pisa / Admin')
             ->sidebarCollapsibleOnDesktop()
             ->maxContentWidth(MaxWidth::Full)
             ->colors([

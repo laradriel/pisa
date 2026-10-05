@@ -28,7 +28,7 @@ class PimPanelProvider extends PanelProvider
             ->default()
             ->id('pim')
             ->path('pim')
-            ->brandName('PIM / App')
+            ->brandName('Pisa / PIM')
             ->brandLogoHeight('58px')
             ->sidebarCollapsibleOnDesktop()
             ->maxContentWidth(MaxWidth::Full)

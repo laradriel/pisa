@@ -1,6 +1,6 @@
-# Context for task planning: Lyon PIM
+# Context for task planning: Pisa PIM
 
-You are planning the implementation backlog for **Lyon**, a self-hosted Product Information Management (PIM) system built with **Laravel 11, Filament 3, Livewire 3, PHP 8.3, MySQL 8**. The repo is `/home/hussam/Code/Laravel/Lyon`, branch `main`. The `README.md` was just rewritten to describe the **target state** as if the product were fully implemented. Your job is to turn the gap between the current code and that README into concrete, well-sized tasks (suitable as GitHub issues with acceptance criteria), grouped into epics, ordered by dependency.
+You are planning the implementation backlog for **Pisa**, a self-hosted Product Information Management (PIM) system built with **Laravel 11, Filament 3, Livewire 3, PHP 8.3, MySQL 8**. The repo is `/home/hussam/Code/Laravel/Lyon`, branch `main`. The `README.md` was just rewritten to describe the **target state** as if the product were fully implemented. Your job is to turn the gap between the current code and that README into concrete, well-sized tasks (suitable as GitHub issues with acceptance criteria), grouped into epics, ordered by dependency.
 
 Read `README.md` first. It is the specification. Everything below tells you what already exists, what is missing, what decisions were taken, and what constraints apply.
 
