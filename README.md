@@ -523,4 +523,6 @@ Out of scope for this release, planned afterwards:
 
 ## License
 
-Pisa is proprietary software of [byte5](https://byte5.de). All rights reserved.
+Pisa is free software licensed under the [GNU Affero General Public License v3.0 or later](LICENSE) (AGPL-3.0-or-later).
+
+You may use, modify and redistribute Pisa under its terms. If you run a modified version of Pisa as a network service, you must offer its users the corresponding source code.
