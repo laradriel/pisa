@@ -28,7 +28,7 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('sku')
                     ->label('SKU')
                     ->required()
-                    ->regex(`[A-Z0-9-][A-Z0-9-]+`),
+                    ->regex('/^[A-Z0-9-]+$/'),
                 Forms\Components\Select::make('family_id')
                     ->label('Family')
                     ->searchable(['name'])

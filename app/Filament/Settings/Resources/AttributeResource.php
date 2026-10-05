@@ -28,7 +28,7 @@ class AttributeResource extends Resource
                     ->maxLength(144),
                 Forms\Components\TextInput::make('code')
                     ->unique(table: Attribute::class, ignoreRecord: true)
-                    ->regex(`[a-z-]+`)
+                    ->regex('/^[a-z][a-z0-9-]*$/')
                     ->required()
                     ->maxLength(144),
                 Forms\Components\Textarea::make('description')
